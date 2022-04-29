@@ -12,4 +12,10 @@ public class HomeController {
 		model.addAttribute("message", "hello from homecontroller");
 		return "home";
 	}
+	
+	@RequestMapping("/message")
+	public String displayMessage(ModelMap model) {
+		model.addAttribute("value", "this is a special message");
+		return "message";
+	}
 }
